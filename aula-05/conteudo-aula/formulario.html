@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac</title>
+</head>
+
+<body>
+
+    <h1>Formulario em HTML</h1>
+
+    <p>Principais elementos usados na criação de formularios HTML</p>
+    <!-- 
+    form: cria um formlario na pagina.
+    action: define a URL para onde os dados do formulario serao enviados.
+    method: define o metodo HTTP que sera usado para enviar os dados do formulario.
+    GET: Busca os dados.
+    POST: Envia os dados.
+    name: define o nome do campo do formulario.
+    -->
+
+    <form action="#" method="post" name="cadastro">
+
+        <h3>Campo de Texto</h3>
+        <!-- label: cria um rotulo para o campo de texto 
+        for:conecta o label ao campo usando o id do input
+        input: cria um campo de texto
+        type: define o tipo do campo de texto
+        id: define o id do campo de texto
+        name: define o nome do campo de texto 
+        -->
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+        <br><br>
+
+
+        <h3>Campo de E-mail</h3>
+        <!-- email: define o campo de email -->
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+
+
+        <h3>Campo de Senha</h3>
+        <!-- Password define o campo como SENHA -->
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha">
+        <br><br>
+
+
+        <h3>Campo de Telefone</h3>
+        <!-- tel: define o campo como TELEFONE, e em smartphones, abre o teclado Numerico -->
+        <label for="telefone">Telefone:</label>
+        <input type="tel" name="telefone" id="telefone">
+        <br><br>
+
+
+        <h3>Campo Numerico</h3>
+        <!-- number: define o campo como NUMERICO
+        min: define o valor minimo que pode ser digitado
+        max: define o valor maximo que pode ser digitado 
+        -->
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade" min="0" max="120">
+        <br><br>
+
+
+        <h3>Campo de Data</h3>
+        <!-- date: define o campo como DATA -->
+        <label for="nascimento">Nascimento:</label>
+        <input type="date" name="nascimento" id="nascimento">
+        <br><br>
+
+
+        <h3>Campo de Hora</h3>
+        <!-- time: define o campo como HORA -->
+        <label for="Horario">Horario:</label>
+        <input type="time" name="Horario" id="Horario">
+        <br><br>
+
+
+        <h3>Campo de Data e Hora</h3>
+        <!-- datetime-local: define o campo como DATA E HORA -->
+        <label for="agendamento">agendamento:</label>
+        <input type="datetime-local" name="agendamento" id="agendamento">
+        <br><br>
+
+
+        <h3>Campo de Site</h3>
+        <!-- url: define o campo como SITE 
+        o navegador valida se o que foi digitado é um site valido, caso contrario, nao deixa enviar o formulario 
+        -->
+        <label for="site">Site:</label>
+        <input type="url" name="site" id="site">
+        <br><br>
+
+
+        <h3>Campo de Texto de exemplo</h3>
+        <!-- placeholder: define um texto de exemplo que sera exibido no campo 
+        o Texto some quando o usuario começa a digitar 
+        -->
+        <label for="usuario">usuario:</label>
+        <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuario">
+        <br><br>
+
+
+        <h3>Campo Obrigatorio</h3>
+        <!-- 
+        minlength: define o tamanho minimo que o campo deve ter, caso contrario, nao deixa enviar o formulario
+        maxlength: define o tamanho maximo que o campo deve ter, caso contrario, nao deixa enviar o formulario
+        required: define que o campo é obrigatorio, e nao deixa enviar o formulario caso nao seja preenchido 
+        -->
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" required>
+        <br><br>
+
+
+        <h3>Campo com limite de caracter</h3>
+        <!-- 
+        minlength: define o tamanho minimo que o campo deve ter de caracteres
+        maxlength: define o tamanho maximo que o campo deve ter de caracteres
+        -->
+        <label for="codigo">Código:</label>
+        <input type="text" name="codigo" id="codigo" minlength="4" maxlength="8">
+        <br><br>
+
+
+        <h3>Campo com Valor Incial</h3>
+        <!-- 
+        value: define o valor inicial do campo,
+        -->
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" id="cidade" value="São Paulo">
+        <br><br>
+
+
+        <h3>Campo de Somente Leitura</h3>
+        <!-- readonly: define o campo como somente leitura, ou seja, o usuario pode visualizar o valor mas nao pode edita-lo -->
+        <label for="matricula">matricula</label>
+        <input type="text" name="matricula" id="matricula" value="2026001" readonly>
+        <br><br>
+
+
+        <h3>Campo de Escolha Unica</h3>
+        <!-- radio: cria opções de escolha única 
+        value: define o valor que sera enviado quando a opção for selecionada 
+        -->
+        <p>Periodo:</p>
+        <input type="radio" name="periodo" id="manha" value="manha">
+        <label for="manha">Manhã</label><br>
+        <input type="radio" name="periodo" id="tarde" value="tarde">
+        <label for="tarde">Tarde</label><br>
+        <input type="radio" name="periodo" id="noite" value="noite">
+        <label for="noite">Noite</label>
+        <br><br>
+
+
+        <h3>Campo de escolha Multipla</h3>
+        <!-- 
+        checkbox: cria opções de escolha múltipla 
+        value: define o valor que sera enviado quando a opção for selecionada 
+        -->
+        <p>Interesses:</p>
+        <input type="checkbox" name="interesses" id="html" value="HTML5">
+        <label for="html">HTML5</label><br>
+        <input type="checkbox" name="interesses" id="css" value="CSS">
+        <label for="css">CSS3</label><br>
+        <input type="checkbox" name="interesses" id="javaScript" value="JavaScript">
+        <label for="javaScript">JavaScript</label>
+        <br><br>
+
+
+        <h3>Campo de Seleção</h3>
+        <!-- select: cria um campo de seleção 
+        option: define as opções que estarão disponíveis no campo de seleção
+        -->
+        <label for="curso">Curso:</label>
+        <select name="curso" id="curso">
+            <option value="Selecione um Curso">Selecione um Curso</option>
+            <option value="html">HTML5</option>
+            <option value="css">CSS3</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+        <br><br>
+
+
+        <h3>Campo de Texto Longo</h3>
+        <!-- textarea: cria um campo de texto longo 
+        rows: define o número de linhas que o campo terá
+        cols: define o número de colunas que o campo terá
+        -->
+        <label for="observacao">Observacao:</label>
+        <br>
+        <textarea name="observacao" id="observacao" rows="5" cols="40"></textarea>
+        <br><br>
+
+
+        <h3>Campo de Arquivos</h3>
+        <!-- 
+        file: cria um campo para envio de arquivos 
+        -->
+        <label for="arquivo">Arquivo:</label>
+        <input type="file" name="arquivo" id="arquivo">
+        <br><br>
+
+
+        <h3>Campo de Cor</h3>
+        <!-- 
+        color: cria um campo para seleção de cor 
+        -->
+        <label for="cor">Escolha uma Cor: </label>
+        <input type="color" name="cor" id="cor">
+        <br><br>
+
+
+        <h3>Campo de Faixa de Valor</h3>
+        <!-- 
+        range: cria um campo para seleção de faixa de valor
+        min: define o valor mínimo
+        max: define o valor máximo
+        step: Define de quanto em quanto o campo pula (de 1 em 1, de 5 em 5, etc)
+        -->
+        <label for="nivel">Nivel de Conhecimento:</label>
+        <input type="range" name="nivel" id="nivel" min="0" max="100" step="1">
+        <br><br>
+
+
+        <h3>Agrupamento de Campos</h3>
+        <!-- 
+        fieldset: cria um agrupamento de campos
+        legend: cria uma legenda para o agrupamento de campos
+        -->
+        <fieldset>
+            <legend>Dados de acesso</legend>
+            <label for="login">Login:</label>
+            <input type="text" name="login" id="login">
+            <br><br>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha2" id="senha2">
+        </fieldset>
+        <br><br>
+
+        <h3>Botões de Formulario</h3>
+        <!-- 
+        submit: cria um botão de envio do formulario
+        resert: cria um botão de reset do formulario
+        button: cria um botão genérico, que pode ser usado para qualquer ação
+        -->
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar Campos">
+        <input type="button" value="Botão Comum">
+        <br><br>
+
+
+
+
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <!-- CHECKBOX PERMITE VARIAS OPÇÕES, MESMO QUE TENHAM O MESMO NAME
+    RADIO PERMITE APENAS UMA OPÇÃO, POIS UTILIZA O MESMO NAME
+     -->
+
+</body>
+
+</html>
